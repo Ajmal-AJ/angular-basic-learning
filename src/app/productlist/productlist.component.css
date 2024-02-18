@@ -1,0 +1,17 @@
+.product-container {
+    padding: 10px;
+    border: 1px solid #eee;
+    width: 25%;
+}
+
+button {
+    padding: 10px ;
+}
+
+.primarybtn {
+    background-color: #4ee567;
+
+}
+.disablecalss {
+    background-color: red;
+}

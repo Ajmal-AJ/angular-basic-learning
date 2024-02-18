@@ -1,0 +1,20 @@
+<li class="card" >
+    <div>
+        <img [src]="product.image" alt="">
+        <div class="">
+            <h4> {{product.name}}</h4>
+            <p>{{product.model}}</p>
+            <p>{{product.price}}</p>
+            <p *ngFor="let color of product.colors">
+                {{color}}
+            </p>
+            <!-- -- ngStyle directive example -->
+            <p class="" [ngStyle]="{fontWeight:'700',color: product.isAvailable ? 'green':'red'}">
+                
+                {{product.isAvailable ? 'Available':'Not Available'}}</p>
+
+            <!-- ngClass Example  -->
+
+        </div>
+    </div>
+</li>
