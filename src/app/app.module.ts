@@ -11,11 +11,12 @@ import { headerComponents } from './header/header.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
-import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductlistComponent } from './container/productlist/productlist.component';
 import { FormsModule } from '@angular/forms';
-import { ProductComponent } from './productlist/product/product.component';
-import { FilterComponent } from './productlist/filter/filter.component';
-import { SearchComponent } from './search/search.component';
+import { ProductComponent } from './container/productlist/product/product.component';
+import { FilterComponent } from './container/productlist/filter/filter.component';
+import { SearchComponent } from './container/search/search.component';
+import { ContainerComponent } from './container/container.component';
 
 
 
@@ -30,7 +31,8 @@ import { SearchComponent } from './search/search.component';
     ProductlistComponent,
     ProductComponent,
     FilterComponent,
-    SearchComponent 
+    SearchComponent,
+    ContainerComponent 
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="searchbox">
+    <!-- <h6>Two way Binding example</h6> -->
+
+    <input type="text" class="searchInput" placeholder="search" [(ngModel)] = "searchText">
+    <p *ngIf="searchText !=''">search result: {{searchText}}</p>
+</div>
+
+
+<hr>
+
+<div class="">
+    <h4 >Template Referance variable Example</h4>
+
+    <!-- Referance variable passing  -->
+    <input type="text" name=""  #SearchText>
+    <button (click) = "updatesearchText(SearchText)">search</button>
+</div>
