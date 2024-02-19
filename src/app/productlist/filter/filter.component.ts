@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input ,EventEmitter, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-filter',
@@ -19,4 +20,20 @@ export class FilterComponent {
 
   @Input()
   notavailable_item:number =0;
+
+
+  
+  
+  selectedFilterRadiobutton : string = 'all' // set default selection of radio button 
+ 
+  @Output()
+  selectedFilterRadioButtonChanged:EventEmitter<string> = new EventEmitter<string>();
+
+
+  onRadiobuttonChange() {
+    console.log("from child component",this.selectedFilterRadiobutton)
+    // custom event 
+    // here emit the value of radio button when user change the radio. emit() mehtod is used 
+    this.selectedFilterRadioButtonChanged.emit(this.selectedFilterRadiobutton)
+  }
 }

@@ -87,4 +87,12 @@ export class ProductlistComponent {
   totalitem = this.complexlist.length;
   availableItem = this.complexlist.filter(count =>count.isAvailable===true).length;
   notavailableItem = this.complexlist.filter(count =>count.isAvailable===false).length;
+
+
+
+  selectedRadiobuttonvalue :string = 'all'
+  onFilterChanged(value :string) {
+    this.selectedRadiobuttonvalue = value
+    console.log("filter changed parent:",this.selectedRadiobuttonvalue)
+  }
  }

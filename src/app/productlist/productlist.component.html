@@ -115,7 +115,15 @@
 
 <div>
 
-    <app-filter [all]="totalitem" [available_item] = "availableItem" [notavailable_item]="notavailableItem"></app-filter>
+    <app-filter 
+    [all]="totalitem" 
+    [available_item] = "availableItem"
+     [notavailable_item]="notavailableItem"
+
+     (selectedFilterRadioButtonChanged) ="onFilterChanged($event)"
+     
+     
+     ></app-filter>
     <ul class="produtlist-container">
         <!-- custom Property binding example  -->
 
