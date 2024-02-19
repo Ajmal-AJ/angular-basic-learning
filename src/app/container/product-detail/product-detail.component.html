@@ -1,0 +1,26 @@
+<div class="">
+  <h5>Prdoduct Deatails</h5>
+
+  <h5>Product Name:{{product.name }}</h5>
+    <!-- <img src="" alt=""> -->
+  <div>
+        <span>price each pair : <span> ${{product.price}} </span> <span> $999 </span> (inclusive of all taxes) </span>
+  </div>
+  <p>Size </p>
+
+    <span >5</span>
+    <span>7</span>
+    <span>4</span>
+  
+  <p >Colors</p>
+    <ul>
+        <li *ngIf="let size in product.colors">{{size}}</li>
+       
+    </ul>
+
+    <div>
+        <p>product description</p>
+    </div>
+
+    <button class="btn">Add to Cart </button>
+</div>

@@ -1,6 +1,13 @@
 
 <div>
+    
+    <app-search></app-search>
 
-    <productlist></productlist>
+    <productlist #productListComponent ></productlist>
 
+    <product-detail 
+     *ngIf="productListComponent.selectedproduct"
+    [productListComp]="productListComponent"
+     
+     ></product-detail>
 </div>

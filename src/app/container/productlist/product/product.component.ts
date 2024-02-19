@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../../Models/Product'; 
+
 
 @Component({
   selector: 'app-product',
@@ -8,12 +10,5 @@ import { Component, Input } from '@angular/core';
 export class ProductComponent {
   
   @Input()
-  product : {
-    "name" : string,
-    "model" : string,
-    "price" : number,
-    "colors" : string[],
-    "image" : string
-    "isAvailable" :boolean
-  }
+  product :Product;
 }

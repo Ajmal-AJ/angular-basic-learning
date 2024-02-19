@@ -17,6 +17,7 @@ import { ProductComponent } from './container/productlist/product/product.compon
 import { FilterComponent } from './container/productlist/filter/filter.component';
 import { SearchComponent } from './container/search/search.component';
 import { ContainerComponent } from './container/container.component';
+import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 
 
 
@@ -32,7 +33,8 @@ import { ContainerComponent } from './container/container.component';
     ProductComponent,
     FilterComponent,
     SearchComponent,
-    ContainerComponent 
+    ContainerComponent,
+    ProductDetailComponent 
   ],
   imports: [
     BrowserModule,

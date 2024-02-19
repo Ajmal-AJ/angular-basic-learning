@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../../Models/Product';
 
 @Component({
   selector: 'productlist',
@@ -64,6 +65,11 @@ export class ProductlistComponent {
   // ngFor example 
 
   listofdata :string[]=["mark","jhone","manu"]
+
+
+
+
+  selectedproduct : Product;
 
   complexlist =[
     {
