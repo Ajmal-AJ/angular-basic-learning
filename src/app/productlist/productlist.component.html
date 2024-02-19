@@ -1,118 +1,130 @@
-<div>
-    <!-- interpolation  -->
-    <p>Name : {{name}}</p>
-    <p>Price : ${{price}}</p>
-    <p>color : {{color}}</p>
-    <p>Discount Price : $798</p>
 
-</div>
-
-
-<div class="product-container">
-    <p>render data from object : - </p>
-    <!-- interpolation  -->
-    <!-- <img src="{{product.image}}" width="400" height="400" alt=""> -->
-    
-    <!-- Property binding example  -->
-    <img [src]="product.image" alt="" width="400" height="400" />
-    
-    <p>Name : {{product.name}}</p>
-    <p>Price : {{'$'+product.price}}</p>
-    <p>color : {{product.color}}</p>
-    <p>Discount Price : {{ product.price - ( product.price * product.discount / 100) }}</p>
-    <p> discount showing by function : {{getdiscount()}}</p>
-    <p>{{product.instock > 0 ? 'only '+product.instock+'left' : 'not in stock'}}</p>
-    
-    <!-- 2nd example of Property binding  -->
-    <button [disabled]="!(product.instock > 0)">Order</button>
-    
-    <!-- Event binding  Example-->
-    <!-- <input type="text" [value]="name" (input)="onNameChange($event)">
-        <p>{{name}}</p> -->
-        <!-- ========================================== -->
-        
-        <button class="btn" (click)="decrement()">-</button>
-        <span>{{addtoCart}}</span>
-        <button class="btn" (click)="incerement()">+</button>
-        
-        
-        
-        
-    </div>
-
-
-    <div class="">
-        <h6>Two way Binding example</h6>
-
-        <input type="text" [(ngModel)] = "searchText">
-        <p *ngIf="searchText !=''">search result: {{searchText}}</p>
-    </div>
-
-
+<div style="display: none;">
     <div>
-        <h4 class="">looping in angular</h4>
-
-
-        <ul>
-            <li *ngFor="let item of [2,3,4,5,7]"> {{item}}</li>
-        </ul>
-
-        <!-- ----from ts   -->
-
-        <ul>
-            <li *ngFor="let item of listofdata">
-                {{item}}
-            </li>
-        </ul>
-
-        <!-- --complex list  -->
-        <!-- <ul>
-
-
-            <li class="card" *ngFor="let product of complexlist">
-                <div>
-                    <img [src]="product.image" alt="">
-                    <div class="">
-                        <h4> {{product.name}}</h4>
-                        <p>{{product.model}}</p>
-                        <p>{{product.price}}</p>
-                        <p *ngFor="let color of product.colors">
-                            {{color}}
-                        </p>
-                        ngStyle directive example 
-                        <p class="" [ngStyle]="{fontWeight:'700',color: product.isAvailable ? 'green':'red'}">
-                            
-                            {{product.isAvailable ? 'Available':'Not Available'}}</p>
-
-                        ngClass Example  
-
-                        <button class="" [ngClass]="{'btn':true ,'primarybtn':searchText,'disablecalss':!searchText}" > addCart</button>
-                    </div>
-                </div>
-            </li>
-
-
-
-        </ul> -->
-
-
-
-        <ul class="produtlist-container">
-            <!-- custom Property binding example  -->
-
-            <app-filter [all]="totalitem" [available_item] = "availableItem" [notavailable_item]="notavailableItem"></app-filter>
-            <app-product *ngFor="let prod of complexlist" [product]="prod"></app-product>
-            <!-- parentcomponent to child component data pass  -->
-            <!-- here [product] is the custom propert bind and prod is the data  -->
-        </ul> 
-
-
-
-
+        <!-- interpolation  -->
+        <p>Name : {{name}}</p>
+        <p>Price : ${{price}}</p>
+        <p>color : {{color}}</p>
+        <p>Discount Price : $798</p>
+    
     </div>
-
-    <hr>
- 
-<div class="">
+    
+    
+    <div class="product-container">
+        <p>render data from object : - </p>
+        <!-- interpolation  -->
+        <!-- <img src="{{product.image}}" width="400" height="400" alt=""> -->
+        
+        <!-- Property binding example  -->
+        <img [src]="product.image" alt="" width="400" height="400" />
+        
+        <p>Name : {{product.name}}</p>
+        <p>Price : {{'$'+product.price}}</p>
+        <p>color : {{product.color}}</p>
+        <p>Discount Price : {{ product.price - ( product.price * product.discount / 100) }}</p>
+        <p> discount showing by function : {{getdiscount()}}</p>
+        <p>{{product.instock > 0 ? 'only '+product.instock+'left' : 'not in stock'}}</p>
+        
+        <!-- 2nd example of Property binding  -->
+        <button [disabled]="!(product.instock > 0)">Order</button>
+        
+        <!-- Event binding  Example-->
+        <!-- <input type="text" [value]="name" (input)="onNameChange($event)">
+            <p>{{name}}</p> -->
+            <!-- ========================================== -->
+            
+            <button class="btn" (click)="decrement()">-</button>
+            <span>{{addtoCart}}</span>
+            <button class="btn" (click)="incerement()">+</button>
+            
+            
+            
+            
+        </div>
+    
+    
+        <div class="">
+            <h6>Two way Binding example</h6>
+    
+            <input type="text" [(ngModel)] = "searchText">
+            <p *ngIf="searchText !=''">search result: {{searchText}}</p>
+        </div>
+    
+    
+        <div>
+            <h4 class="">looping in angular</h4>
+    
+    
+            <ul>
+                <li *ngFor="let item of [2,3,4,5,7]"> {{item}}</li>
+            </ul>
+    
+            <!-- ----from ts   -->
+    
+            <ul>
+                <li *ngFor="let item of listofdata">
+                    {{item}}
+                </li>
+            </ul>
+    
+            <!-- --complex list  -->
+            <!-- <ul>
+    
+    
+                <li class="card" *ngFor="let product of complexlist">
+                    <div>
+                        <img [src]="product.image" alt="">
+                        <div class="">
+                            <h4> {{product.name}}</h4>
+                            <p>{{product.model}}</p>
+                            <p>{{product.price}}</p>
+                            <p *ngFor="let color of product.colors">
+                                {{color}}
+                            </p>
+                            ngStyle directive example 
+                            <p class="" [ngStyle]="{fontWeight:'700',color: product.isAvailable ? 'green':'red'}">
+                                
+                                {{product.isAvailable ? 'Available':'Not Available'}}</p>
+    
+                            ngClass Example  
+    
+                            <button class="" [ngClass]="{'btn':true ,'primarybtn':searchText,'disablecalss':!searchText}" > addCart</button>
+                        </div>
+                    </div>
+                </li>
+    
+    
+    
+            </ul> -->
+    
+    
+    
+           
+    
+    
+    
+    
+        </div>
+    
+        <hr>
+    
 
 </div>
+
+<!-- =======================================  -->
+
+<div>
+
+    <app-filter [all]="totalitem" [available_item] = "availableItem" [notavailable_item]="notavailableItem"></app-filter>
+    <ul class="produtlist-container">
+        <!-- custom Property binding example  -->
+
+        <app-product *ngFor="let prod of complexlist" [product]="prod"  class="items"></app-product>
+        <!-- parentcomponent to child component data pass  -->
+        <!-- here [product] is the custom propert bind and prod is the data  -->
+    </ul> 
+
+</div>
+
+
+
