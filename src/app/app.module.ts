@@ -15,6 +15,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './productlist/product/product.component';
 import { FilterComponent } from './productlist/filter/filter.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -28,7 +29,8 @@ import { FilterComponent } from './productlist/filter/filter.component';
     MainMenuComponent,
     ProductlistComponent,
     ProductComponent,
-    FilterComponent 
+    FilterComponent,
+    SearchComponent 
   ],
   imports: [
     BrowserModule,
