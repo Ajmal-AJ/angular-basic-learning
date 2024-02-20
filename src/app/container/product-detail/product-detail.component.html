@@ -12,9 +12,9 @@
     <span>7</span>
     <span>4</span>
   
-  <p >Colors</p>
-    <ul>
-        <li *ngIf="let size in product.colors">{{size}}</li>
+    <ul style="display: flex; gap: 20px;">
+      <p >Colors : </p>
+      <li *ngFor="let size of product.colors">{{size}}</li>
        
     </ul>
 

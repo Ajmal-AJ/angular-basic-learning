@@ -18,6 +18,7 @@ import { FilterComponent } from './container/productlist/filter/filter.component
 import { SearchComponent } from './container/search/search.component';
 import { ContainerComponent } from './container/container.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
+import { ExampleComponent } from './example/example.component';
 
 
 
@@ -34,7 +35,8 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
     FilterComponent,
     SearchComponent,
     ContainerComponent,
-    ProductDetailComponent 
+    ProductDetailComponent,
+    ExampleComponent 
   ],
   imports: [
     BrowserModule,
