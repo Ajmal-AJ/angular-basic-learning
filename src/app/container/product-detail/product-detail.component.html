@@ -22,5 +22,9 @@
         <p>product description</p>
     </div>
 
-    <button class="btn">Add to Cart </button>
+    <button class="btn" *ngIf="product.isAvailable; else notifyme">Add to Cart </button>
+      <ng-template #notifyme>
+        <button class="btn">Notfiy me</button>
+
+      </ng-template>
 </div>

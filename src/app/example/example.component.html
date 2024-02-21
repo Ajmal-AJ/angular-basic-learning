@@ -14,3 +14,20 @@
 
     <p>{{fulldata }}</p>
 </div>
+
+
+<div style="border: 1px solid #b1adad; padding: 10px; margin: 10px;">
+   <h1>ng-template Example</h1> 
+
+    <!-- # ng template is angular element -->
+
+
+    <ng-template #myTemplate>
+        <h1>headline render from ng template</h1>
+        <p>Lorem ipsum dolor sit, amet consecte</p>
+    </ng-template>
+
+
+        <div *ngTemplateOutlet="myTemplate"></div>
+</div>
+
