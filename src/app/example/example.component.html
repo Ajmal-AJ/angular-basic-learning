@@ -31,3 +31,14 @@
         <div *ngTemplateOutlet="myTemplate"></div>
 </div>
 
+
+<!-- -----ng container  Example  -->
+
+<div class="">
+    <h2>ng-Container Example</h2>
+
+    <ng-container *ngIf="toggleon">
+        <p>toggle is on</p>
+    </ng-container>
+    <button (click)="toggle()"> ngconatainer demo</button>
+</div>

@@ -128,14 +128,14 @@
         <!-- custom Property binding example  -->
         
         
-        
-        <div *ngFor="let prod of complexlist" (click)="selectedproduct = prod">
+        <!-- #34 we used ng container  -->
+        <ng-container *ngFor="let prod of complexlist" >
 
 
             <!-- *ngIf="selectedRadiobuttonvalue === 'all' || prod.isAvailable.toString() === selectedRadiobuttonvalue" -->
-            <app-product [product]="prod"  ></app-product>
+            <app-product [product]="prod"  (click)="selectedproduct = prod"></app-product>
 
-        </div>
+        </ng-container>
 
 
         <!-- parentcomponent to child component data pass  -->

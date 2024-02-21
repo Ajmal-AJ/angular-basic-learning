@@ -20,4 +20,11 @@ export class ExampleComponent {
     })
     this.fulldata =name.trim()
   }
+
+
+  // ng container example
+  toggleon :boolean =true;
+  toggle() {
+      this.toggleon = !this.toggleon;
+  }
 }
